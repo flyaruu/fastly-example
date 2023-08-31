@@ -1,0 +1,35 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["flyaruu@gmail.com"]
+description = "Some example"
+language = "rust"
+manifest_version = 3
+name = "fastly-example"
+service_id = "SWoOWoZhqrktXIkYUGfUT2"
+
+[local_server]
+
+  [local_server.backends]
+
+    [local_server.backends.surreal]
+      url = "http://10.11.12.213:8000"
+
+    [local_server.backends.swanson]
+      url = "https://ron-swanson-quotes.herokuapp.com"
+
+    [local_server.backends.trivia]
+      url = "http://jservice.io"
+
+[setup]
+
+  [setup.backends]
+
+    [setup.backends.surreal]
+      url = "http://gorilla.codemonkey.nl:8000"
+
+    [setup.backends.swanson]
+      url = "https://ron-swanson-quotes.herokuapp.com"
+
+    [setup.backends.trivia]
+      url = "http://jservice.io"
